@@ -1,0 +1,50 @@
+<h1>Projeto</h1>
+
+<ul class="tree">
+    <li>
+        <span class="node-label" onclick="toggleNode(this)">Backend</span>
+        <ul class="node-children">
+            <li>
+                <span class="node-label" onclick="toggleNode(this)">App</span>
+                <ul class="node-children">
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li> 
+                </ul>
+            </li>
+            <li>
+                <span class="node-label" onclick="toggleNode(this)">Config</span>
+                <ul class="node-children">
+                    <li>banco.js</li>
+                    <li>rostas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span class="node-label" onclick="toggleNode(this)">Frontend</span>
+        <ul class="node-children">
+            <li>
+                <span class="node-label" onclick="toggleNode(this)">Public</span>
+                <ul class="node-children">
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<section id="conteudo"></section>
+<script>
+    function toggleNode(nodeLabel) {
+      var parentLi = nodeLabel.parentNode;
+      var childrenUl = parentLi.querySelector('.node-children');
+      parentLi.classList.toggle('collapsed');
+      parentLi.classList.toggle('expanded');
+    }
+</script>
